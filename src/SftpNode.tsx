@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef } from "react";
+import { useState, useMemo } from "react";
 import { FolderIcon, FileIcon, RefreshIcon } from "./icons";
 import type { SftpFileEntry } from "./types";
 
