@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { FolderIcon, FileIcon, RefreshIcon, UploadIcon, DownloadIcon } from "./icons";
+import { useState } from "react";
+import { FolderIcon, FileIcon, RefreshIcon } from "./icons";
 import type { SftpFileEntry } from "./types";
 
-export function SftpNode({ id, data }: { id?: string; data?: any }) {
-  const [currentPath, setCurrentPath] = useState("/var/www");
-  const [files, setFiles] = useState<SftpFileEntry[]>([
+export function SftpNode() {
+  const [currentPath] = useState("/var/www");
+  const [files] = useState<SftpFileEntry[]>([
     { name: "..", path: "/var", is_dir: true, size: 0, modified: Date.now() },
     { name: "html", path: "/var/www/html", is_dir: true, size: 4096, modified: Date.now() },
     { name: "index.html", path: "/var/www/index.html", is_dir: false, size: 1024, modified: Date.now() },
